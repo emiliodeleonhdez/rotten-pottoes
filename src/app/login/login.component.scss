@@ -20,7 +20,7 @@
     top: 200px;
     right: 50px;
     text-align: right;
-    width: 730px;
+    width: 100%;
   }
   .film {
     position: absolute;
@@ -38,5 +38,16 @@
     right: 50px;
     box-shadow: 5px 5px 20px #383838;
     border-radius: 10px;
+  }
+  .form-group {
+    margin-top: 20px;
+    label {
+      font-weight: bold;
+    }
+  }
+  .btn-container{
+    .btn {
+      margin-top: 30px;
+    }
   }
 }
