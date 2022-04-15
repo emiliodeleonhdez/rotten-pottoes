@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
     const identifier = this.formGroup.value.uname;
     const password = this.formGroup.value.pword;
 
-    console.log("click")
     if (identifier.trim().length === 0) {
       this.errorMessage = 'User name is required';
     } else if (password.trim().length === 0) {
@@ -46,8 +45,9 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem('jwt', response.data.jwt);
         }
       } catch (error) {
+        this.errorMessage = "Bad credentials"
         console.error(error);
-        alert('Something went wrong!');
+        // alert('Something went wrong!');
       }
     }
   }
